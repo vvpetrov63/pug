@@ -4,14 +4,15 @@ html
         meta(charset="utf-8")
         title 
             block title
-        meta(name="description" content="Описание страницы")
-        meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible" content="IE=Edge")
-        link(href="css/style.scc" rel="stylesheet")
+        block metatags
+            meta(name="description" content="Описание страницы")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+        block links
+            link(href="css/style.scc" rel="stylesheet")
     body
         include includes/_header.pug
         //- content here
         block content
-
-        script(src="js/my.js")
-        block addscript
+        block scripts
+            script(src="js/my.js")

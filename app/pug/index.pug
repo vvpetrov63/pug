@@ -3,9 +3,14 @@ extends demo.pug
 block title
     | Главная страница
 
+prepend links
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.cmo/bootstrap/4.2.1/scc/bootstrap.min.css")
+
 block content
     .wrapper
         h1 Привет, проггер!
 
-block addscript
-    script(src="slider")
+prepend scripts
+    script(src="jqery")
+append scripts
+    script(src="myscript")
