@@ -1,13 +1,9 @@
-extends demo.pug
+extends includes/template.pug
 
-prepend links
-    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.cmo/bootstrap/4.2.1/scc/bootstrap.min.css")
+append config
+    - var myTitle = "Блог о Pug шаблонизаторе"
+    - var myDesc = "Учимся создавать страницы и шаблоны на базе шаблонизатора Pug"
 
-block content
-    .wrapper
-        h1 Привет, проггер!
-
-prepend scripts
-    script(src="jqery")
-append scripts
-    script(src="myscript")
+append content
+    p.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quibusdam vel, magni odio voluptatibus esse nisi placeat praesentium id inventore consequuntur adipisci cumque numquam, voluptatem dolore. Inventore saepe harum quibusdam!

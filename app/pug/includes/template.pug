@@ -1,4 +1,5 @@
-include includes/config.pug
+block config
+    include config.pug
 
 doctype html
 html
@@ -6,19 +7,27 @@ html
         meta(charset="utf-8")
         title #{myTitle}
         block metatags
-            meta(name="description" content="Описание страницы")
+            meta(name="description" content=myDesc)
             meta(name="viewport" content="width=device-width, initial-scale=1.0")
             meta(http-equiv="X-UA-Compatible" content="IE=Edge")
         block links
             if Bootstrap4
                 link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
-            link(href=csspath+"/style.scc" rel="stylesheet")
+            link(href=csspath+"/style.css" rel="stylesheet")
             if GoogleFonts
                 link(href="https://fonts.googleapis.com/css?family="+GoogleFonts+"&display=swap" rel="stylesheet")
     body
-        include includes/_header.pug
-        //- content here
-        block content
+        include _header.pug
+
+        main(role="main")
+            section.jumbotron.text-center
+                .container
+                    block content
+                    h1 #{myTitle}
+                        //- content here
+
+                    a.btn.btn-primary(href="#") Main call to action
+                    a.btn.btn-secondary(href="#") Secondary action
         block scripts
             if jQuery3
                 script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
