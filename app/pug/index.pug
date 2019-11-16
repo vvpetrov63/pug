@@ -4,6 +4,19 @@ append config
     - var myTitle = "Блог о Pug шаблонизаторе"
     - var myDesc = "Учимся создавать страницы и шаблоны на базе шаблонизатора Pug"
 
+append links
+    style.
+        h1{
+            font-size: 100px;
+        }
 append content
     p.
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quibusdam vel, magni odio voluptatibus esse nisi placeat praesentium id inventore consequuntur adipisci cumque numquam, voluptatem dolore. Inventore saepe harum quibusdam!
+
+append scripts
+    script.
+        let btn = document.getElementsByClassName ("btn-primary")[0];
+
+        btn.onclick = function () {
+            btn.style.background = "transparent"; 
+        }
