@@ -4,5 +4,9 @@ append config
     - var myTitle = "Свяжитесь с нами"
     - var myDesc = "Присылайте нам свои вопросы по работе с Pug-шаблонизатором"
 
-prepend content
-    img(scr="https://sun9-17.userapi.com/c858524/v858524453/4e2c/TPNb_12gqk8.jpg" style="display: block") 
+append content
+    div#carouselExampleSlidesOnly.carousel.slide(data-ride="carousel")
+        .carousel-inner
+            +slide('https://sun9-21.userapi.com/5wr4bKbC2mklr3nzK8wxx8V2g6mMOSrSpaYCfA/6n2sY2TTvNQ.jpg', 'active')
+            +slide('https://sun9-10.userapi.com/8ohF5av-r0aXPaCfNogbRvbvJZROrs0e4GCRZg/45xmzA2lBlU.jpg', '')            +
+            +slide('https://sun9-16.userapi.com/ZUS6b6WqmWfsgzXA0FH3jYqK6oSKbvlb49RZUQ/Px8ZCHOcd6U.jpg', '')
