@@ -1,6 +1,9 @@
-nav.navbar
-    ul
-        li: a(href="#") Главная
-        li: a(href="#") Блог
-        li: a(href="#") Портфолио
-        li: a(href="#") Контакты
+mixin menu(menu_items)
+    ul.navbar-nav.mr-auto
+        each item in menu_items
+            li.nav-item: a.nav-link(href=item.href) #{item.title}
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    a.navbar-brand(href="#") PugCools
+        .container
+            +menu([{'title' : 'Главная', 'href' : 'index.html'}, {'title' : 'Портфолио', 'href' : ''}, {'title' : 'Контакты', 'href' : 'contact.html'},])

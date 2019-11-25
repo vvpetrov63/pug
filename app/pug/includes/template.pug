@@ -1,7 +1,7 @@
 block config
     include config.pug
 
-mixin slide(src, active)
+mixin slide(src, active='')
     .carousel-item(class=active)
         img(src=src class="d-block w-100" alt="...")
 
